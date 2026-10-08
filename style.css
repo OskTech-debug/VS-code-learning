@@ -1,0 +1,272 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eff0f2;
+    color: #222;
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+h2 {
+    margin-top: 35px;
+        
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+nav h2 {
+    margin: 0;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #222;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: 0 auto 30px;
+}
+
+.hero button {
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 8px;
+}
+
+.hero button:hover {
+    opacity: 0.8;
+}
+
+.projects {
+    padding: 20px 0 40px;
+}
+
+.projects__heading {
+    margin: 0 0 24px;
+    text-align: center;
+}
+
+.projects__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+    padding: 24px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.project-card__title {
+    margin: 0 0 12px;
+    font-size: 22px;
+}
+
+.project-card__description {
+    margin: 0 0 18px;
+    font-size: 16px;
+}
+
+.project-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0 0 20px;
+    padding: 0;
+    list-style: none;
+}
+
+.project-card__tag {
+    margin: 0;
+    padding: 5px 10px;
+    background-color: #eff0f2;
+    border-radius: 999px;
+    font-size: 14px;
+}
+
+.project-card__button {
+    margin-top: auto;
+    background-color: #222;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+}
+
+.project-card__button:hover {
+    opacity: 0.8;
+}
+
+body.dark-theme {
+    background-color: #1f2329;
+    color: #f1f3f5;
+}
+
+.dark-theme nav {
+    border-bottom-color: #454b54;
+}
+
+.dark-theme nav a {
+    color: #f1f3f5;
+}
+
+.dark-theme .hero button {
+    background-color: #f1f3f5;
+    color: #1f2329;
+}
+
+.dark-theme .project-card {
+    background-color: #292e36;
+    border-color: #454b54;
+}
+
+.dark-theme .project-card__tag {
+    background-color: #343a40;
+}
+
+.dark-theme .project-card__button {
+    background-color: #f1f3f5;
+    color: #1f2329;
+}
+
+.dark-theme #themeToggle {
+    background-color: #343a40;
+    color: #f1f3f5;
+    border: 1px solid #69717c;
+    border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 28px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    nav > div {
+        order: 3;
+        flex: 1 1 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 20px;
+    }
+
+    nav a {
+        margin-left: 0;
+    }
+
+    .hero {
+        padding: 64px 16px;
+    }
+
+    .hero h1 {
+        font-size: 44px;
+    }
+
+    .projects__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 20px;
+    }
+
+    nav {
+        padding: 16px 0;
+        gap: 12px;
+    }
+
+    nav h2 {
+        font-size: 22px;
+    }
+
+    nav > div {
+        column-gap: 16px;
+    }
+
+    .hero {
+        padding: 48px 8px;
+    }
+
+    .hero h1 {
+        font-size: clamp(32px, 8vw, 40px);
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .projects {
+        padding: 12px 0 28px;
+    }
+
+    .projects__grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+    }
+
+    .project-card {
+        padding: 20px;
+    }
+
+    button {
+        max-width: 100%;
+    }
+}
